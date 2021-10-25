@@ -147,6 +147,14 @@ button {
 }
 
 /* ========================== § LAYOUT === */
+.page {
+  margin: 0 auto;
+  width: 375px;
+
+  @include mq($desktop-width, up) {
+    width: 1440px;
+  }
+}
 .grid {
   display: grid;
   grid-template-areas:
@@ -176,6 +184,12 @@ button {
 
 .text-container {
   grid-area: text;
+
+  @include mq($desktop-width, down) {
+    text-align: center;
+    padding: 0 2rem;
+  }
+
   @include mq($desktop-width, up) {
     padding: 0 14rem 10.7rem 10.5rem;
   }
@@ -183,11 +197,14 @@ button {
 
 /* ========================== § TEXT === */
 .title {
-  margin-top: 3.1rem;
-  margin-bottom: 1rem;
-  line-height: 1.1em;
-  font-size: 4rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.35em;
+  @include mq($desktop-width, up) {
+    margin-top: 3.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.1em;
+    font-size: 4rem;
+    letter-spacing: 0.25em;
+  }
 }
 
 .subtitle {

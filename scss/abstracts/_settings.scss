@@ -1,6 +1,6 @@
 $base-font-size: 16px;
 $small-font-size: 16px * 0.9;
-$desktop-width: 610px;
+$desktop-width: 1440px;
 $mobile-width: $desktop-width - 1px;
 
 :root {
@@ -19,7 +19,7 @@ $mobile-width: $desktop-width - 1px;
   --gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
   // Typography
-  --base-font-size: #{$base-font-size};
+  --base-font-size: 14px;
   --small-font-size: #{$small-font-size};
   --body-font-family: "Josefin Sans", sans-serif;
   --headings-font-family: var(--body-font-family);
@@ -29,4 +29,10 @@ $mobile-width: $desktop-width - 1px;
   --h4-font-size: 1.3rem;
   --h5-font-size: 1.1rem;
   --h6-font-size: 1rem;
+}
+
+@media screen and (min-width: $desktop-width) {
+  :root {
+    --base-font-size: 16px;
+  }
 }

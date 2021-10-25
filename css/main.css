@@ -9,7 +9,7 @@
   --grey500: hsl(0, 0%, 50%);
   --gradient1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   --gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  --base-font-size: 16px;
+  --base-font-size: 14px;
   --small-font-size: 14.4px;
   --body-font-family: "Josefin Sans", sans-serif;
   --headings-font-family: var(--body-font-family);
@@ -21,6 +21,11 @@
   --h6-font-size: 1rem;
 }
 
+@media screen and (min-width: 1440px) {
+  :root {
+    --base-font-size: 16px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -171,11 +176,23 @@ button {
 }
 
 /* ========================== § LAYOUT === */
+.page {
+  margin: 0 auto;
+  width: 375px;
+}
+@media screen and (min-width: 1440px) {
+  .page {
+    /* mixin mq */
+    width: 1440px;
+    /* end mixin mq */
+  }
+}
+
 .grid {
   display: grid;
   grid-template-areas: "header header" "pic pic" "text text";
 }
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 1440px) {
   .grid {
     /* mixin mq */
     grid-template-columns: 1fr auto;
@@ -187,7 +204,7 @@ button {
 .header {
   grid-area: header;
 }
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 1440px) {
   .header {
     /* mixin mq */
     padding: 4rem 10.2rem;
@@ -202,7 +219,15 @@ button {
 .text-container {
   grid-area: text;
 }
-@media screen and (min-width: 610px) {
+@media screen and (max-width: 1439px) {
+  .text-container {
+    /* mixin mq */
+    text-align: center;
+    padding: 0 2rem;
+    /* end mixin mq */
+  }
+}
+@media screen and (min-width: 1440px) {
   .text-container {
     /* mixin mq */
     padding: 0 14rem 10.7rem 10.5rem;
@@ -212,11 +237,18 @@ button {
 
 /* ========================== § TEXT === */
 .title {
-  margin-top: 3.1rem;
-  margin-bottom: 1rem;
-  line-height: 1.1em;
-  font-size: 4rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.35em;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    /* mixin mq */
+    margin-top: 3.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.1em;
+    font-size: 4rem;
+    letter-spacing: 0.25em;
+    /* end mixin mq */
+  }
 }
 
 .subtitle {
@@ -224,7 +256,7 @@ button {
 }
 
 /* ========================== § IMG === */
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 1440px) {
   .img-container img {
     /* mixin mq */
     max-height: 800px;

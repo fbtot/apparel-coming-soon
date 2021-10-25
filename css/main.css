@@ -170,7 +170,7 @@ button {
   cursor: pointer;
 }
 
-/* ========================== § GRID === */
+/* ========================== § LAYOUT === */
 .grid {
   display: grid;
   grid-template-areas: "header header" "pic pic" "text text";
@@ -178,7 +178,7 @@ button {
 @media screen and (min-width: 610px) {
   .grid {
     /* mixin mq */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-areas: "header pic" "text pic" "text pic";
     /* end mixin mq */
   }
@@ -186,6 +186,7 @@ button {
 
 .header {
   grid-area: header;
+  padding: 4rem 10.2rem;
 }
 
 .img-container {
@@ -194,6 +195,17 @@ button {
 
 .text-container {
   grid-area: text;
+  padding: 0 14rem 10.7rem 10.5rem;
+}
+
+/* ========================== § TEXT === */
+/* ========================== § IMG === */
+@media screen and (min-width: 610px) {
+  .img-container img {
+    /* mixin mq */
+    max-height: 800px;
+    /* end mixin mq */
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

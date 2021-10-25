@@ -19,7 +19,7 @@ body {
   color: var(--text-color);
   background: url(../images/bg-pattern-desktop.svg) 0 0 no-repeat, var(--gradient1);
   background-size: cover, cover;
-  line-height: 1.6em;
+  line-height: 1.8em;
 }
 
 /* ========================== § TYPOGRAPHY === */
@@ -46,7 +46,7 @@ h6 {
 h1 {
   font-size: var(--h1-font-size);
   line-height: 1.2em;
-  font-weight: 400;
+  font-weight: 600;
   color: #3c3535;
   text-transform: uppercase;
 
@@ -165,7 +165,9 @@ button {
 
 .header {
   grid-area: header;
-  padding: 4rem 10.2rem;
+  @include mq($desktop-width, up) {
+    padding: 4rem 10.2rem;
+  }
 }
 
 .img-container {
@@ -174,16 +176,55 @@ button {
 
 .text-container {
   grid-area: text;
-  padding: 0 14rem 10.7rem 10.5rem;
+  @include mq($desktop-width, up) {
+    padding: 0 14rem 10.7rem 10.5rem;
+  }
 }
 
 /* ========================== § TEXT === */
+.title {
+  margin-top: 3.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.1em;
+  font-size: 4rem;
+  letter-spacing: 0.25em;
+}
 
+.subtitle {
+  margin-bottom: 2.5rem;
+}
 /* ========================== § IMG === */
 .img-container {
   img {
     @include mq($desktop-width, up) {
       max-height: 800px;
     }
+  }
+}
+
+.input-container {
+  display: flex;
+}
+
+.form__email {
+  width: 100%;
+  padding: 1rem 1.7rem;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin-right: -2rem;
+  border: 2px solid #e3d5d9;
+}
+
+.form__button {
+  padding: 1rem 1.7rem;
+  background: var(--gradient2);
+  border-radius: 100px;
+  width: 7rem;
+  border: none;
+  box-shadow: 0 0.7rem 1rem hsl(0, 80%, 86%);
+
+  &:hover {
+    background: hsl(0, 80%, 86%);
+    box-shadow: 0 0.7rem 1rem #e5b7b8;
   }
 }

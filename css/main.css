@@ -3,7 +3,7 @@
   --desaturated-red: hsl(0, 36%, 70%);
   --soft-red: hsl(0, 93%, 68%);
   --dark-grayish-red: hsl(0, 6%, 24%);
-  --text-color: hsl(0, 0%, 7%);
+  --text-color: var(--desaturated-red);
   --accent-color: hsl(216, 61%, 54%);
   --grey300: hsl(0, 0%, 70%);
   --grey500: hsl(0, 0%, 50%);
@@ -33,9 +33,16 @@ html {
 }
 
 body {
+  /* @mixin antialias */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* end @mixin antialias */
+  min-height: 100vh;
+  min-width: 100vw;
   font-family: var(--body-font-family);
   color: var(--text-color);
-  background-color: #eeeeee;
+  background: url(../images/bg-pattern-desktop.svg) 0 0 no-repeat, var(--gradient1);
+  background-size: cover, cover;
   line-height: 1.6em;
 }
 
@@ -63,6 +70,13 @@ h6 {
 h1 {
   font-size: var(--h1-font-size);
   line-height: 1.2em;
+  font-weight: 400;
+  color: #3c3535;
+  text-transform: uppercase;
+}
+h1 span {
+  color: var(--text-color);
+  font-weight: 300;
 }
 
 h2 {
@@ -157,12 +171,12 @@ button {
 }
 
 /* ========================== § GRID === */
-body {
+.grid {
   display: grid;
   grid-template-areas: "header header" "pic pic" "text text";
 }
 @media screen and (min-width: 610px) {
-  body {
+  .grid {
     /* mixin mq */
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "header pic" "text pic" "text pic";

@@ -204,10 +204,25 @@ button {
 .header {
   grid-area: header;
 }
+@media screen and (max-width: 1439px) {
+  .header {
+    /* mixin mq */
+    padding: 2.2rem 2.2rem 1.8rem;
+    /* end mixin mq */
+  }
+}
 @media screen and (min-width: 1440px) {
   .header {
     /* mixin mq */
     padding: 4rem 10.2rem;
+    /* end mixin mq */
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .header__logo {
+    /* mixin mq */
+    width: 7rem;
     /* end mixin mq */
   }
 }
@@ -238,6 +253,8 @@ button {
 /* ========================== § TEXT === */
 .title {
   letter-spacing: 0.35em;
+  margin-top: 3.7rem;
+  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 1440px) {
   .title {
@@ -253,6 +270,13 @@ button {
 
 .subtitle {
   margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 1439px) {
+  .subtitle {
+    /* mixin mq */
+    line-height: 1.6rem;
+    /* end mixin mq */
+  }
 }
 
 /* ========================== § IMG === */
@@ -281,9 +305,16 @@ button {
   padding: 1rem 1.7rem;
   background: var(--gradient2);
   border-radius: 100px;
-  width: 7rem;
+  width: 5rem;
   border: none;
   box-shadow: 0 0.7rem 1rem #f8bfbf;
+}
+@media screen and (min-width: 1440px) {
+  .form__button {
+    /* mixin mq */
+    width: 7rem;
+    /* end mixin mq */
+  }
 }
 .form__button:hover {
   background: #f8bfbf;

@@ -173,8 +173,19 @@ button {
 
 .header {
   grid-area: header;
+
+  @include mq($desktop-width, down) {
+    padding: 2.2rem 2.2rem 1.8rem;
+  }
+
   @include mq($desktop-width, up) {
     padding: 4rem 10.2rem;
+  }
+}
+
+.header__logo {
+  @include mq($desktop-width, down) {
+    width: 7rem;
   }
 }
 
@@ -198,6 +209,9 @@ button {
 /* ========================== § TEXT === */
 .title {
   letter-spacing: 0.35em;
+  margin-top: 3.7rem;
+  margin-bottom: 0.5rem;
+
   @include mq($desktop-width, up) {
     margin-top: 3.1rem;
     margin-bottom: 1rem;
@@ -209,6 +223,10 @@ button {
 
 .subtitle {
   margin-bottom: 2.5rem;
+
+  @include mq($desktop-width, down) {
+    line-height: 1.6rem;
+  }
 }
 /* ========================== § IMG === */
 .img-container {
@@ -236,9 +254,13 @@ button {
   padding: 1rem 1.7rem;
   background: var(--gradient2);
   border-radius: 100px;
-  width: 7rem;
+  width: 5rem;
   border: none;
   box-shadow: 0 0.7rem 1rem hsl(0, 80%, 86%);
+
+  @include mq($desktop-width, up) {
+    width: 7rem;
+  }
 
   &:hover {
     background: hsl(0, 80%, 86%);

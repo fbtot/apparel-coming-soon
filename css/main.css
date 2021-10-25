@@ -156,4 +156,30 @@ button {
   cursor: pointer;
 }
 
+/* ========================== § GRID === */
+body {
+  display: grid;
+  grid-template-areas: "header header" "pic pic" "text text";
+}
+@media screen and (min-width: 610px) {
+  body {
+    /* mixin mq */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header pic" "text pic" "text pic";
+    /* end mixin mq */
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.img-container {
+  grid-area: pic;
+}
+
+.text-container {
+  grid-area: text;
+}
+
 /*# sourceMappingURL=main.css.map */

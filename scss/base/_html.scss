@@ -133,3 +133,32 @@ select {
 button {
   cursor: pointer;
 }
+
+/* ========================== § GRID === */
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "pic pic"
+    "text text";
+
+  @include mq($desktop-width, up) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header pic"
+      "text pic"
+      "text pic";
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.img-container {
+  grid-area: pic;
+}
+
+.text-container {
+  grid-area: text;
+}

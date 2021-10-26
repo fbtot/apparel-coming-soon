@@ -13,6 +13,7 @@ html {
 
 body {
   @include antialias;
+  @include center(flex);
   min-height: 100vh;
   min-width: 100vw;
   font-family: var(--body-font-family);
@@ -148,7 +149,7 @@ button {
 
 /* ========================== § LAYOUT === */
 .page {
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 375px;
 
   @include mq($desktop-width, up) {

@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/apparel-coming-soon-page-with-success-message-Tw43m2UNS)
+- Live Site URL: [Live site](https://filippo-b.github.io/apparel-coming-soon/)
 
 ## My process
 
@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Useful resources
 
-- [Example resource 1](https://www.w3resource.com/javascript/form/email-validation.php) - Email validation regex.
+- [Email validation regex](https://www.w3resource.com/javascript/form/email-validation.php)
 
 ## Author
 

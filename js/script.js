@@ -6,7 +6,8 @@ const subscribedMsg = document.getElementById("subscribed-message");
 button.addEventListener("click", function (event) {
   event.preventDefault();
 
-  if (emailInput.validity.valid) {
+  //   if (emailInput.validity.valid) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
     emailInput.classList.remove("error");
     errorMsg.classList.remove("error");
     subscribedMsg.classList.add("fadeIn");

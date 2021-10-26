@@ -6,7 +6,7 @@ const subscribedMsg = document.getElementById("subscribed-message");
 button.addEventListener("click", function (event) {
   event.preventDefault();
 
-  //   if (emailInput.validity.valid) {
+  // regex from here: https://www.w3resource.com/javascript/form/email-validation.php
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
     emailInput.classList.remove("error");
     errorMsg.classList.remove("error");

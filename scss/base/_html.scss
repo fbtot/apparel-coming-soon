@@ -278,7 +278,8 @@ button {
 .error-message {
   display: none;
   width: 100%;
-
+  color: var(--soft-red);
+  margin-left: 1.8rem;
   @include mq($desktop-width, down) {
     text-align: left;
   }

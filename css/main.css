@@ -343,4 +343,42 @@ button {
   display: block;
 }
 
+.subscribed-message {
+  /* @mixin center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* end @mixin center */
+  opacity: 0;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+  padding: 4rem 3rem;
+  background: var(--gradient2);
+  color: white;
+  border-radius: 2rem;
+  outline: 1px solid #fff5f5;
+  outline-offset: -1rem;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.fadeIn {
+  transition: 0.2s ease-out;
+  opacity: 100%;
+}
+
+.fadeOut {
+  transition: 1s ease-out;
+  opacity: 0;
+}
+
 /*# sourceMappingURL=main.css.map */

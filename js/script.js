@@ -1,6 +1,7 @@
 const button = document.getElementById("form-button");
 const emailInput = document.getElementById("email");
 const errorMsg = document.getElementById("error-message");
+const subscribedMsg = document.getElementById("subscribed-message");
 
 button.addEventListener("click", function (event) {
   event.preventDefault();
@@ -8,7 +9,15 @@ button.addEventListener("click", function (event) {
   if (emailInput.validity.valid) {
     emailInput.classList.remove("error");
     errorMsg.classList.remove("error");
-    console.log("ok");
+    subscribedMsg.classList.add("fadeIn");
+
+    setTimeout(function () {
+      subscribedMsg.classList.replace("fadeIn", "fadeOut");
+    }, 5000);
+
+    setTimeout(function () {
+      subscribedMsg.classList.remove("fadeOut");
+    }, 6000);
   } else {
     emailInput.classList.add("error");
     errorMsg.classList.add("error");

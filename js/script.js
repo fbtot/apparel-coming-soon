@@ -8,6 +8,7 @@ button.addEventListener("click", function (event) {
 
   // regex from here: https://www.w3resource.com/javascript/form/email-validation.php
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+    // if email addreess is valid
     emailInput.classList.remove("error");
     errorMsg.classList.remove("error");
     subscribedMsg.classList.add("fadeIn");
@@ -18,8 +19,9 @@ button.addEventListener("click", function (event) {
 
     setTimeout(function () {
       subscribedMsg.classList.remove("fadeOut");
-    }, 6000);
+    }, 5100);
   } else {
+    // if email address is not valid
     emailInput.classList.add("error");
     errorMsg.classList.add("error");
   }

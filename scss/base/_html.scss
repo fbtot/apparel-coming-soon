@@ -150,9 +150,14 @@ button {
 /* ========================== § LAYOUT === */
 .page {
   margin: 1rem auto;
-  width: 375px;
+  max-width: 575px;
+
+  @include mq(400px, $desktop-width) {
+    // width: 70%;
+  }
 
   @include mq($desktop-width, up) {
+    max-width: unset;
     width: 1440px;
   }
 }
@@ -223,7 +228,7 @@ button {
 }
 
 .subtitle {
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem auto;
 
   @include mq($desktop-width, down) {
     line-height: 1.6rem;
@@ -231,7 +236,11 @@ button {
 }
 /* ========================== § IMG === */
 .img-container {
-  img {
+  img,
+  source {
+    @include mq($desktop-width, down) {
+      width: 100%;
+    }
     @include mq($desktop-width, up) {
       max-height: 800px;
     }

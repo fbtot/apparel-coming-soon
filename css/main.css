@@ -183,11 +183,18 @@ button {
 /* ========================== § LAYOUT === */
 .page {
   margin: 1rem auto;
-  width: 375px;
+  max-width: 575px;
+}
+@media screen and (min-width: 400px) and (max-width: 1439px) {
+  .page {
+    /* mixin mq */
+    /* end mixin mq */
+  }
 }
 @media screen and (min-width: 1440px) {
   .page {
     /* mixin mq */
+    max-width: unset;
     width: 1440px;
     /* end mixin mq */
   }
@@ -274,7 +281,7 @@ button {
 }
 
 .subtitle {
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem auto;
 }
 @media screen and (max-width: 1439px) {
   .subtitle {
@@ -285,8 +292,17 @@ button {
 }
 
 /* ========================== § IMG === */
+@media screen and (max-width: 1439px) {
+  .img-container img,
+.img-container source {
+    /* mixin mq */
+    width: 100%;
+    /* end mixin mq */
+  }
+}
 @media screen and (min-width: 1440px) {
-  .img-container img {
+  .img-container img,
+.img-container source {
     /* mixin mq */
     max-height: 800px;
     /* end mixin mq */

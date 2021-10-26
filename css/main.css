@@ -290,15 +290,16 @@ button {
 
 .input-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .form__email {
-  width: 100%;
   padding: 1rem 1.7rem;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
   margin-right: -2rem;
   border: 2px solid #e3d5d9;
+  flex: 1 0 auto;
 }
 
 .form__button {
@@ -319,6 +320,27 @@ button {
 .form__button:hover {
   background: #f8bfbf;
   box-shadow: 0 0.7rem 1rem #e5b7b8;
+}
+
+.form__email.error {
+  border-color: var(--soft-red);
+  background: url(../../images/icon-error.svg) right 3rem center no-repeat;
+}
+
+.error-message {
+  display: none;
+  width: 100%;
+}
+@media screen and (max-width: 1439px) {
+  .error-message {
+    /* mixin mq */
+    text-align: left;
+    /* end mixin mq */
+  }
+}
+
+.error-message.error {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

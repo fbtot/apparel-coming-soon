@@ -303,15 +303,6 @@ button {
   pointer-events: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-
 .fadeIn {
   transition: 0.2s ease-out;
   opacity: 100%;

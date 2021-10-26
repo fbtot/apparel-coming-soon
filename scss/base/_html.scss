@@ -306,6 +306,7 @@ button {
 .fadeIn {
   transition: 0.2s ease-out;
   opacity: 100%;
+  pointer-events: unset;
 }
 
 .fadeOut {
